@@ -1,0 +1,158 @@
+:root {
+  --paper: #E6E6E8;
+  --panel: #F4F4F5;
+  --ink: #17171A;
+  --muted: #55555D;
+  --red: #D32F2F;
+  --blue: #1E4FD8;
+  --teal: #12805C;
+  --line: rgba(23, 23, 26, .18);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #17181C;
+    --panel: #212227;
+    --ink: #EDEDEF;
+    --muted: #A3A3AB;
+    --red: #EF5350;
+    --blue: #6A97FF;
+    --teal: #2FBF92;
+    --line: rgba(237, 237, 239, .2);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  max-width: 1360px;
+  padding: 24px 24px 44px;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.1;
+  margin: 0 0 6px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.sub {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 62ch;
+}
+
+.stage {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 10px;
+  box-shadow: 0 14px 38px -8px rgba(0, 0, 0, 0.09);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 960 / 420;
+  border-radius: 10px;
+  touch-action: none;
+  cursor: pointer;
+  outline: none;
+}
+
+canvas:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+  margin-top: 14px;
+}
+
+button {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 8px 18px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+button:focus-visible, input:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--blue);
+}
+
+.legend {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.keys {
+  margin: 16px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}

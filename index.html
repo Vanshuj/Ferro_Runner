@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferro Runner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Ferro Runner</h1>
+  <p class="sub">You are a magnetic ball between a magnetic ceiling and floor. Flip your pole to steer: the same pole repels, the opposite attracts. Stay off both rails.</p>
+
+  <div class="stage">
+    <canvas id="game" tabindex="0" aria-label="Ferro Runner game. Press Space or tap to flip your magnetic pole."></canvas>
+  </div>
+
+  <div class="bar">
+    <button id="pauseBtn" type="button">Pause</button>
+    <label><input id="assist" type="checkbox"> Assist mode (slower, gentler)</label>
+    <div class="legend" aria-hidden="true">
+      <span><i class="dot" style="background:var(--red)"></i>N pole</span>
+      <span><i class="dot" style="background:var(--blue)"></i>S pole</span>
+      <span><i class="dot" style="background:var(--teal)"></i>Gem</span>
+    </div>
+  </div>
+
+  <p class="keys">Controls: click, tap, or press Space to flip. Press P to pause. Your best score is saved in this browser.</p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
